@@ -1,0 +1,18 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body class="flex flex-col items-center h-screen bg-base-100">
+    <div class="w-full max-w-3xl flex-grow">
+      <Navbar />
+      <div class="p-4 pb-10">
+        <slot />
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
