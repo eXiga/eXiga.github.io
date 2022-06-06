@@ -9,9 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.41"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^0.2.1"
+    "@astrojs/tailwind": "^0.2.1",
+    "astro": "^1.0.0-beta.41",
+    "daisyui": "^2.15.2"
   }
 }
