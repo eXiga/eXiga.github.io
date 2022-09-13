@@ -5,13 +5,11 @@ import blogMeta from "../config";
 
 <footer class="footer items-center p-2 bg-neutral text-neutral-content">
   <div class="items-center grid-flow-col">
-    <img
-      src={blogMeta.profilePicture}
-      width="48"
-      height="48"
-      alt="Avatar"
-      class="rounded-full w-10 h-10"
-    />
+    <div class="avatar">
+      <div class="w-10 h-10 rounded-full">
+        <img src={blogMeta.profilePicture} alt="Avatar" />
+      </div>
+    </div>
     <p>
       Copyright &copy; {year}
       <span>👀</span> Please, no copperino w/o mentiorino

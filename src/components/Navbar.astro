@@ -1,18 +1,23 @@
 ---
+import blogMeta from "../config";
 ---
 
-<div class="navbar bg-base-100">
+<div class="navbar shadow">
   <div class="flex-1">
-    <a
-      href="/"
-      class="btn no-animation btn-ghost normal-case text-xl flex gap-4 items-center"
-    >
-      Rants and thoughts
+    <a href="/">
+      <img src={blogMeta.logo} alt="Logo" />
     </a>
   </div>
   <div class="flex-none">
     <ul class="menu p-0">
-      <li><a href="/about">About</a></li>
+      <li>
+        <a
+          role="button"
+          href="/about"
+          class="btn btn-secondary btn-outline border-2 rounded-full no-animation"
+          >About</a
+        >
+      </li>
     </ul>
   </div>
 </div>
