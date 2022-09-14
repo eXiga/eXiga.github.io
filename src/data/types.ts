@@ -1,7 +1,7 @@
 interface Post {
   title: string;
   description: string;
-  publishDate: string;
+  date: string;
 }
 
 export type { Post };

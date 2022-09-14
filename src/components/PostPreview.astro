@@ -1,12 +1,12 @@
 ---
 export interface Props {
   title: string,
-  publishDate: string,
+  date: string,
   description: string,
   isLatest?: boolean
 }
 
-const { title, publishDate, description, isLatest = false } = Astro.props;
+const { title, date, description, isLatest = false } = Astro.props;
 ---
 
 <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
@@ -17,5 +17,5 @@ const { title, publishDate, description, isLatest = false } = Astro.props;
     </span>
   }
 </h3>
-<time class="block mb-2 text-sm font-normal leading-none text-gray-400">Posted on {publishDate}</time>
+<time class="block mb-2 text-sm font-normal leading-none text-gray-400">Posted on {date}</time>
 <p class="mb-4 text-base font-normal text-gray-500">{description}</p>
