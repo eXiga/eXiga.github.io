@@ -1,0 +1,23 @@
+---
+import type { Post } from "../data/types";
+import PostPreview from "./PostPreview.astro";
+import PostEmoji from "./PostEmoji.astro";
+import { formatDateString } from "../data/utils";
+
+export interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ol class="relative border-l border-gray-300 ml-5 mt-5">
+  {
+    posts.map((post, index) => (
+      <li class="mb-10 ml-6">
+        <PostEmoji />
+        <PostPreview description={post.description} publishDate={formatDateString(post.publishDate)} title={post.title} isLatest={ index === 0 }/>
+      </li>
+    ))
+  }
+</ol>
