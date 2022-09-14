@@ -1,8 +1,9 @@
 module.exports = {
   plugins: [require("prettier-plugin-astro")],
+  astroAllowShorthand: false,
   overrides: [
     {
-      files: "**/*astro",
+      files: "*.astro",
       options: {
         parser: "astro",
       },
