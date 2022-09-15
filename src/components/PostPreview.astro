@@ -1,21 +1,22 @@
 ---
 export interface Props {
+  url: string,
   title: string,
   date: string,
   description: string,
   isLatest?: boolean
 }
 
-const { title, date, description, isLatest = false } = Astro.props;
+const { url, title, date, description, isLatest = false } = Astro.props;
 ---
 
-<h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
-  {title}
+<div class="flex items-center mb-1 text-lg font-semibold text-gray-900">
+  <a href={url}>{title}</a>
   {
     isLatest && <span class="bg-primary-focus text-seconary text-sm font-medium mr-2 ml-3 px-2.5 py-0.5 rounded">
       Latest
     </span>
   }
-</h3>
+</div>
 <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Posted on {date}</time>
 <p class="mb-4 text-base font-normal text-gray-500">{description}</p>

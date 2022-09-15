@@ -5,7 +5,7 @@ import type { Post } from "@utils/types";
 
 const mds = await Astro.glob<Post>("./posts/*.md");
 const posts = mds
-  .map((m) => m.frontmatter)
+  .map((m) => ({ ...m.frontmatter, url: m.url }))
   .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 ---
 

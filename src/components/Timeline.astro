@@ -16,7 +16,7 @@ const { posts } = Astro.props;
     posts.map((post, index) => (
       <li class="mb-10 ml-6">
         <PostEmoji />
-        <PostPreview description={post.description} date={formatDateString(post.date)} title={post.title} isLatest={ index === 0 }/>
+        <PostPreview url={post.url} description={post.description} date={formatDateString(post.date)} title={post.title} isLatest={ index === 0 }/>
       </li>
     ))
   }
