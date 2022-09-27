@@ -1,8 +1,11 @@
 ---
 import DefaultLayout from "@layouts/DefaultLayout.astro";
+
+const title = Astro.props.frontmatter.title;
 ---
 
 <DefaultLayout>
+  <title>{title}</title>
   <article class="ml-auto mr-auto max-w-6xl prose prose-p:text-lg">
     <slot />
   </article>

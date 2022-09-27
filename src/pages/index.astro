@@ -2,6 +2,7 @@
 import DefaultLayout from "@layouts/DefaultLayout.astro";
 import Timeline from "@components/Timeline.astro";
 import type { Post } from "@utils/types";
+import blogMeta from "../config";
 
 const mds = await Astro.glob<Post>("./posts/*.md");
 const posts = mds
@@ -9,7 +10,8 @@ const posts = mds
   .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 ---
 
-<DefaultLayout title="Welcome to Astro.">
+<DefaultLayout>
+  <title>{blogMeta.titles.posts}</title>
   <main>
     <Timeline posts={posts} />
   </main>

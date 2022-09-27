@@ -1,8 +1,10 @@
 ---
 import DefaultLayout from "@layouts/DefaultLayout.astro";
+import blogMeta from "../config";
 ---
 
 <DefaultLayout>
+  <title>{blogMeta.titles.about}</title>
   <article class="ml-auto mr-auto max-w-6xl prose prose-p:text-lg">
     <h2>Hello there! 🤓</h2>
     <p>
