@@ -3,8 +3,10 @@ const year = new Date().getFullYear();
 import blogMeta from "../config";
 ---
 
-<footer class="footer items-center p-2 bg-neutral text-neutral-content">
-  <div class="items-center grid-flow-col">
+<footer
+  class="footer flex items-center justify-between p-2 bg-neutral text-neutral-content"
+>
+  <div class="flex items-center justify-center">
     <div class="avatar">
       <div class="w-10 h-10 rounded-full">
         <img src={blogMeta.profilePicture} alt="Avatar" />
@@ -15,7 +17,7 @@ import blogMeta from "../config";
       <span>👀</span> Please, no copperino w/o mentiorino
     </p>
   </div>
-  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+  <div>
     <a href={blogMeta.github}
       ><svg
         xmlns="http://www.w3.org/2000/svg"
