@@ -1,12 +1,16 @@
 ---
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Rants and thoughts</title>
+    <ViewTransitions />
   </head>
   <body class="flex flex-col items-center h-screen bg-base-100">
     <Navbar />
